@@ -77,8 +77,13 @@ function temperatureCtoF(celTemp) {
  *
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
  */
-function temperatureInF(/* code here */) {
+function temperatureInF(temp, unit) {
   /* code here */
+  if (unit === "C") {
+    return `temperatureCtoF (temp)F`;
+  } else {
+    return Math.round(temp) + unit;
+  }
 }
 
 /**
