@@ -36,8 +36,7 @@ function addNumbers(num1, num2) {
  */
 function sayGoodbye(name) {
   /* code here */
-  return "Goodbye, " + name + ". Have a great day.";
-  // return `Goodbye, ${name}.  Have a great day.`;
+  return `Goodbye, ${name}. Have a great day.`; //I originally had 2 spaces after the period; the test counted it wrong.
 }
 
 /**
@@ -358,8 +357,16 @@ function getGermanCars(inventory) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
  */
-function carMaker(/* code here */) {
+function carMaker(ometer) {
   /* code here */
+  const car = {
+    odometer: ometer,
+    drive: function (distance) {
+      this.odometer += distance;
+      return this.odometer;
+    },
+  };
+  return car;
 }
 
 /// ////// END OF CHALLENGE /////////
