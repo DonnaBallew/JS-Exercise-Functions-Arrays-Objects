@@ -165,8 +165,17 @@ function appleIndex(fruit) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
  */
-function isItAnApple(/* code here */) {
+function isItAnApple(fruit) {
   /* code here */
+  let whichFruit = [];
+  for (let i = 0; i < fruit.length; i++) {
+    if (fruit[i] === "apple") {
+      whichFruit.push(true);
+    } else {
+      whichFruit.push(false);
+    }
+  }
+  return whichFruit;
 }
 
 /*
@@ -222,6 +231,7 @@ function get3rdCar(inventory) {
  */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
 /**
